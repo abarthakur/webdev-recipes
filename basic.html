@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- -->
+<html lang="en">
+	<head>
+		<!-- 
+		Important standard meta tags 
+			https://www.w3schools.com/tags/tag_meta.asp
+		-->
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Foo Bar">
+		<meta name="description" content="This is a description of this article">
+
+		<!--
+		Directives for web crawlers
+			https://moz.com/learn/seo/robots-meta-directives
+		-->
+
+		<meta name="robots" content="index,follow" />
+
+		<!-- 
+		Social Media tags 
+			https://moz.com/blog/meta-data-templates-123
+			https://moz.com/blog/seo-meta-tags
+		-->
+
+		<!--Open Graph Data-->
+		<meta property="og:title" content="Title Here" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://www.example.com/" />
+		<meta property="og:image" content="http://example.com/image.jpg" />
+		<meta property="og:description" content="Description Here" /> 
+		<meta property="og:site_name" content="Site Name, i.e. Moz" />
+		<meta property="fb:admins" content="Facebook numeric ID" />
+
+		<!--Open graph Article data-->
+		<meta property="article:published_time" content="2013-09-17T05:59:00+01:00" />
+		<meta property="article:modified_time" content="2013-09-16T19:08:47+01:00" />
+		<meta property="article:section" content="Article Section" />
+		<meta property="article:tag" content="Article Tag" />
+
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@publisher_handle">
+		<meta name="twitter:title" content="Page Title">
+		<meta name="twitter:description" content="Page description less than 200 characters">
+		<meta name="twitter:creator" content="@author_handle">
+		<!-- Twitter Summary card images must be at least 120x120px -->
+		<meta name="twitter:image" content="http://www.example.com/image.jpg">
+
+		<!-- Favicon (the image in browser tabs/bookmarks) -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+		<!-- External stylesheets -->
+		<link rel="stylesheet" href="my-css-file.css">
+
+		<!-- External scripts -->
+		<script src="my-js-file.js"></script>
+
+		<!-- Title tag also goes in the head. This is what appears on the browser tab.-->
+		<title>The title of the article</title>
+
+		<!-- 
+			Good practice to canonicalize all pages, that is point to where the content actually lives.
+			This is to clearly mark duplicate content that may cause SEO problems [debated?].
+		 -->
+		<link rel="canonical" href="https://www.example.com">
+	</head>
+	<body>
+		<!-- skip links -->
+		<a href="#main" class="skip-main">Skip to main content</a>
+		<a href="#article__content" class="skip-main">Start reading the article</a>
+		<a href="/articles" class="skip-main">Jump to list of all articles</a>
+
+		<header>
+			<div>
+				<div role="navigation">
+					<div class="logo">
+						<a href="/" title="Back to homepage">
+							<picture>
+								<source media="(min-width: 1350px)" srcset="https://logo.png">
+								<img src="https://logo.png">
+							</picture>
+						</a>
+					</div>
+					<nav>
+						<!-- 
+							POSH : The <nav> tag contains navigation links,
+							either within the current document or to other documents.
+						-->
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="forum.html">Forum</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+		<main id="main">
+			<!--
+				POSH: The <main> tag consists of the "main" content of a web page,
+				or the "main" functionality of a web application
+			-->
+			<article class="article" role="main">
+				<!--
+					POSH: <article> element represents a self-contained composition in a document,
+					page, application, or site, which is intended to be independently distributable or reusable.
+				-->
+				<div class="container">
+					<div class="article content">
+						<header class="article-header">
+							<!--
+								POSH: <header> element contains introductory or navigational content.
+								Can contain the title of the article, logos, even a search form.
+							-->
+							<h1>
+								Heading of the article
+							</h1>
+						</header>
+						<div class="aside meta-box page-contents">
+							<ul>
+								<li>
+									<a href="#part1">Part 1</a>
+								</li>
+								<li>
+									<a href="#part2">Part 2</a>
+								</li>
+							</ul>
+						</div>
+						<p>
+							This is a regular article paragraph about siberian wolf puppies.
+						</p>
+						<aside>
+							<!--
+								POSH: <aside> element represents some kind of side-information w.r.t 
+								the main content.
+							-->	
+							An aside about siberian wolf mamas.
+						</aside>
+					</div>
+				</div>
+			</article>
+			<section>
+				<!--
+					POSH: <section> element represents a standalone section in an HTML doc, 
+					without a more appropriate tag. Typically, but not always, sections have a heading.
+					Don't use section as a generic container.
+					A rule of thumb is that a section should logically appear in the outline of a document.
+				-->
+				<h1> Our new book! </h1>
+				<p>
+					These are some details about our new book!
+				</p>
+			</section>
+		</main>
+		<footer>
+			<!--
+				POSH : <footer> element represents a footer for its nearest sectioning content
+				or sectioning root element. A footer typically contains information about the
+				author of the section, copyright data or links to related documents.
+			-->
+		</footer>
+	</body>
+</html>
