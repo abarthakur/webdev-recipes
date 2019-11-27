@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* core css */
+		:root {
+			/* params */
+			--xs-margin: 2rem;
+			--lg-frac: 0.7;
+		}
+
+		.page-wrap{
+			width:100%;
+			min-height:100vh;
+			margin:0;
+			padding:0;
+		}
+
+		.page-section-wrap{
+			width:100%;
+			margin:0;
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items: center ;
+		}
+
+		/*xs*/
+		.page-section-inner{
+			width: calc(100%  - 2*var(--xs-margin));
+			max-width:unset;
+			min-width:unset;
+		}
+
+		@media only screen and (min-width: 576px) {
+			/*sm to md*/
+			.page-section-inner{
+				width: calc(100%  - 2*var(--xs-margin));
+				max-width: calc(992px * var(--lg-frac));
+				min-width:unset;
+			}
+		}
+
+		@media (min-width: 992px) {
+			/*lg to xl*/
+			.page-section-inner{
+				width: calc(var(--lg-frac) * 100%);
+				max-width: calc(1300px * var(--lg-frac));
+				min-width: calc(992px * var(--lg-frac));
+			}
+		}
+		
+		/* demo css */
+
+		.pw{
+			background-color:#cce0ff;
+		}
+
+		.psw-a{
+			padding: 2rem 0;
+			background-color:#bfbfbf;
+		}
+
+		.psi-a{
+			height:26rem;
+			background-color:#ff9933;
+		}
+
+		.psw-b{
+			padding: 4rem 0;
+			background-color:#ff9933;
+		}
+
+		.psi-b{
+			height:32rem;
+			background-color:#bfbfbf;
+		}
+
+	
+	</style>
+</head>
+<body>
+	<div class="page-wrap pw">
+		<div class="page-section-wrap psw-a">
+			<div class="page-section-inner psi-a">
+				<div class="content-a">
+				</div>
+			</div>
+		</div>
+		<div class="page-section-wrap psw-b">
+			<div class="page-section-inner psi-b">
+				<div class="content-b">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
